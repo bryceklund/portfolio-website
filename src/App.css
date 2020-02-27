@@ -188,6 +188,10 @@ a:link, a:visited {
   margin-top: 20px;
 }
 
+.refractor {
+  margin-bottom: 45px;
+}
+
 @keyframes introh2 {
   0% {top: 85px;}
   50% {top: 100px;}
