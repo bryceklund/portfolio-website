@@ -134,12 +134,12 @@ a:link, a:visited {
   font-size: 30px;
   padding: 19px;
   text-align: center;
-  background-color: salmon;
 }
 
 .project {
   max-width: 900px;
   border: 1px solid black;
+  box-shadow: 9px 12px 30px;
 }
 
 .project h3 {
@@ -160,10 +160,6 @@ a:link, a:visited {
 .project-image {
   max-width: 500px;
   margin-top: -3px;
-}
-
-.grandfather .project-image, .refractor .project-image {
-  width: 194px;
 }
 
 .project-description {
@@ -227,6 +223,15 @@ a:link, a:visited {
       padding-bottom: 0;
       line-height: 20px;
     }
+  }
+
+  .grandfather .project-image {
+    width: 230px;
+    border-radius: 0 0 10px 0; 
+  }
+
+  .refractor .project-image {
+    width: 194px;
   }
 
   .image-left {

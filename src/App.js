@@ -90,21 +90,21 @@ function App() {
         </p>
       </section>
     </section>
-        <section className='music-list'>
-      <h2 className='section-title'>Music Projects</h2>
-      <section className='project grandfather'>
-        <h3>Grandfather</h3>
-        <div className='project-links'><a href='https://grandfatherpdx.bandcamp.com/' target='_blank'>Bandcamp</a></div>
-        <img className='project-image image-right' alt='grandfather image' src={GrandfatherPic} />
-        <p className='project-description'>"Semisensical somethingerother from Portland, thrown together quickly and carelessly by four degenerate children" — my magnum opus; a collaboration with three of my best friends that evolved from a basement jam session to a tour and two albums.</p>
-        <p className='tech-used'>
-          <ul className='tech-list'>
-            <li><img className='tech-icon' src={PeoplePic} alt='people logo'/>Songs written by all members</li><br />
-            <li><img className='tech-icon' src={MicrophonePic} alt='microphone logo'/>Recordings made by a slurry of contributors, including all band members</li><br />
-            <li><img className='tech-icon' src={AbletonPic} alt='ableton logo'/>Albums produced by me with Ableton Live 10</li><br />
-          </ul>
-        </p>
-      </section>
+      <section className='project-list'>
+        <h2 className='section-title'>Music Projects</h2>
+        <section className='project grandfather'>
+          <h3>Grandfather</h3>
+          <div className='project-links'><a href='https://grandfatherpdx.bandcamp.com/' target='_blank'>Bandcamp</a></div>
+          <img className='project-image image-right' alt='grandfather image' src={GrandfatherPic} />
+          <p className='project-description'>"Semisensical somethingerother from Portland, thrown together quickly and carelessly by four degenerate children" — my magnum opus; a collaboration with three of my best friends that evolved from a basement jam session to a tour and two albums.</p>
+          <p className='tech-used'>
+            <ul className='tech-list'>
+              <li><img className='tech-icon' src={PeoplePic} alt='people logo'/>Songs written by all members</li><br />
+              <li><img className='tech-icon' src={MicrophonePic} alt='microphone logo'/>Recordings made by a slurry of contributors, including all band members</li><br />
+              <li><img className='tech-icon' src={AbletonPic} alt='ableton logo'/>Albums produced by me with Ableton Live 10</li><br />
+            </ul>
+          </p>
+        </section>
       <section className='project refractor'>
         <h3>refractor</h3>
         <div className='project-links'><a href='https://soundcloud.com/rfrctr' target='_blank'>SoundCloud</a></div>
