@@ -90,7 +90,7 @@ function App() {
         </p>
       </section>
     </section>
-      <section className='project-list'>
+      <section className='project-list music'>
         <h2 className='section-title'>Music Projects</h2>
         <section className='project grandfather'>
           <h3>Grandfather</h3>
