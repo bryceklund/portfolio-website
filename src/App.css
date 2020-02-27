@@ -71,6 +71,7 @@ a:link, a:visited {
   background-color: black;
   color: floralwhite;
   width: 100vw;
+  max-width: 100%;
   text-align: center;
   height: 56px;
   font-style: italic;
@@ -131,6 +132,7 @@ a:link, a:visited {
 
 .section-title {
   width: 100vw;
+  max-width: 100%;
   font-size: 30px;
   padding: 19px 0;
   text-align: center;
@@ -214,6 +216,7 @@ a:link, a:visited {
 @media screen and (max-width: 540px) {
   .project-image {
     width: 100vw;
+    max-width: 100%;
   }
 
   .project {
