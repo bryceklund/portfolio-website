@@ -21,7 +21,8 @@ time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font-family: 'Oxygen';
-	vertical-align: baseline;
+  vertical-align: baseline;
+
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -29,7 +30,8 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
+  background-color: salmon;
 }
 ol, ul {
 	list-style: none;
@@ -49,39 +51,73 @@ table {
 
 /* begin homemade css */
 
+a:link, a:visited {
+  color: midnightblue;
+}
+
 .intro {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10px;
-  background: antiquewhite;
+
+  background: yellow;
 }
 
-.intro h1 {
+.hero {
   font-size: 45px;
-  margin-bottom: 10px;
-}
-
-.intro h2 {
-  font-size: 25px;
-  margin-bottom: 10px;
+  margin-bottom: 67px;
+  animation: enter-text;
+  animation-duration: 2s;
+  background-color: black;
+  color: floralwhite;
+  width: 100vw;
   text-align: center;
+  height: 56px;
+  font-style: italic;
+  padding: 10px;
+
 }
 
-.intro h3 {
+.intro-title {
+  font-size: 25px;
+  position: absolute;
+  top: 85px;
+  text-align: center;
+  /*
+  animation-name: introh2, enter-introh2;
+  animation-duration: introh2 4s, enter-introh2 2s;
+  animation-iteration-count: introh2 infinite, enter-introh2 1;
+  animation-timing-function: ease;*/
+  animation: introh2 4s infinite ease, enter-introh2 2s 1 ease;
+}
+
+.bio {
   line-height: 20px;
   max-width: 700px;
+  font-size: 16px;
+  padding: 20px;
+  animation-name: enter-bio;
+  animation-duration: 2s;
 }
 
 .links {
   display: flex;
   justify-content: space-evenly;
-  background-color: azure;
+  background-color: black;
   padding: 17px;
+}
+
+.links img {
+  filter: brightness(0) invert(1);
 }
 
 .contact-logo {
   width: 50px;
+}
+
+.intro-black {
+  background-color: black;
+  animation: intro-black 4s 1 ease;
 }
 
 .project-list {
@@ -94,8 +130,8 @@ table {
 }
 
 .section-title {
-  width: 100%;
-  font-size: 25px;
+  width: 100vw;
+  font-size: 30px;
   padding: 19px;
   text-align: center;
   background-color: salmon;
@@ -103,6 +139,7 @@ table {
 
 .project {
   max-width: 900px;
+  border: 1px solid black;
 }
 
 .project h3 {
@@ -122,10 +159,21 @@ table {
 
 .project-image {
   max-width: 500px;
+  margin-top: -3px;
+}
+
+.grandfather .project-image, .refractor .project-image {
+  width: 194px;
 }
 
 .project-description {
-  margin: 10px;
+  padding: 15px;
+  background-color: lightsalmon;
+  margin-top: -3px;
+}
+
+.tech-used {
+  background-color: lightsalmon;
 }
 
 .tech-list {
@@ -138,6 +186,31 @@ table {
   float: left;
 }
 
+@keyframes introh2 {
+  0% {top: 85px;}
+  50% {top: 100px;}
+}
+
+@keyframes enter-introh2 {
+  from {left: -2500px;}
+  to {left: 15%;}
+}
+
+@keyframes enter-text {
+  from {margin-top: -1000px;}
+  to {margin-top: initial; }
+}
+
+@keyframes enter-bio {
+  from {margin-left: 5000px;}
+  to {margin-right: initial;}
+}
+
+@keyframes intro-black {
+  from {height: 2000px;}
+  to {height: 0px;}
+}
+
 @media screen and (max-width: 540px) {
   .project-image {
     width: 100vw;
@@ -145,6 +218,17 @@ table {
 }
 
 @media screen and (min-width: 520px) {
+  @media screen and (max-width: 800px) {
+    .chord-magic .project-image {
+      max-width: 515px;
+    }
+  
+    .chord-magic .project-description {
+      padding-bottom: 0;
+      line-height: 20px;
+    }
+  }
+
   .image-left {
     float: left;
     margin-right: 25px;
@@ -154,4 +238,50 @@ table {
     float: right;
     margin-left: 25px;
   }
+
+  .project {
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    background-color: lightsalmon;
+  }
+
+  .project h3 {
+    border-radius: 10px 10px 0 0;
+  }
+
+  .image-left {
+    border-radius: 0 0 0 10px;
+  }
+
+  .image-right {
+    border-radius: 0 0 10px 0;
+  }
+
+  .project-links {
+    position: relative;
+  }
+
+  .ytpoet .project-description {
+    margin-top: 40px;
+    line-height: 27px;
+  }
+
+  .project-list {
+    max-width: 1100px;
+  }
+
+  .bottom-feeder .project-image {
+    width: 400px;
+  }
+
+  .bottom-feeder .project-description {
+    margin-top: 40px;
+  }
+
+  @keyframes enter-introh2 {
+    from {left: -2500px;}
+    to {left: 40%;}
+  }
 }
+

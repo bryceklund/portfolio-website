@@ -10,17 +10,25 @@ import YelpLogo from './assets/yelp.png'
 import LinkedInLogo from './assets/linkedin.png'
 import EmailLogo from './assets/email.png'
 import GitHubLogo from './assets/github.png'
+import GrandfatherPic from './assets/grandfather.jpg'
+import RefractorPic from './assets/refractor.jpg'
+import PeoplePic from './assets/people.png'
+import AbletonPic from './assets/ableton.png'
+import MicrophonePic from './assets/microphone.png'
 import './App.css'
 
 function App() {
   return (
     <div className="App">
       <section className='intro'>
-      <h1>Bryce Eklund</h1>
-      <h2>full stack developer <br />& music maker</h2>
-      <h3>Oh hey, didn't see you walk in there. Welcome to my portfolio! Feel free to look around, and contact me if you're so inclined. My background consists of IT administration, technical support, and lots of code and music. Here you'll find a few examples of everything. My current fixation is with backend development, but I'm no stranger to a full stack. Let's make cool stuff! </h3>
+      <div className='hero'><h1>Bryce Eklund</h1></div>
+      <div className='intro-title'><h2>full stack developer <br />& music maker</h2></div>
+      <div className='bio'>
+        <h3>Oh hey, didn't see you walk in there. Welcome to my portfolio! Feel free to look around, and contact me if you're so inclined. My background consists of IT administration, technical support, and lots of code and music. Here you'll find a few examples of everything. My current fixation is with backend development, but I'm no stranger to a full stack. Let's make cool stuff! </h3>
+      </div>
       {/*i, I'm Bryce. I live for creative problem solving, engineering of all sorts, and good design. Having an idea is a mere fraction of the puzzle — elegant drafting, streamlined implementation, and peer-checked revision are all core elements of a magnificent project. These concepts extend far beyond the reaches of coding; they affect my art and my life. I love all parts of a stack, but with my experience as a producer and an IT administrator, I've developed a particular fixation with backend technologies.*/}
     </section>
+    <div className='intro-black'></div>
     <section className='links'>
       <a href='https://github.com/bryceklund' target='_blank'><img className='contact-logo' src={GitHubLogo} alt='github' /></a>
       <a href='https://linkedin.com/in/bryceklund' target='_blank'><img className='contact-logo' src={LinkedInLogo} alt='linkedin' /></a>
@@ -35,8 +43,8 @@ function App() {
           <a href='https://github.com/bryceklund/chord-magic-client' target='_blank'>client repo</a>
           <a href='https://github.com/bryceklund/chord-magic-server' target='_blank'>server repo</a>
         </div>
-        <img className='project-image image-left' alt='chord-magic image' src='https://camo.githubusercontent.com/95a6d26f478da2d4610d28d7c234f14f047ba642/68747470733a2f2f692e696d6775722e636f6d2f69304a5a7449522e706e67' />
-        <p className='project-description'>A tool for exploring, building, and storing chord progressions. Choose from four in-browser-generated instruments, five octaves, and over 100 chords as you piece together the foundation of your new smash pop hit.</p>
+        <img className='project-image image-left' alt='chord-magic image' src='https://i.imgur.com/54raUns.png' />
+        <p className='project-description'>A tool for exploring, building, and storing chord progressions. Choose from four in-browser-generated instruments, five octaves, and over 100 chords as you piece together the foundation for your new smash pop hit.</p>
         <p className='tech-used'>
           <ul className='tech-list'>
             <li><img className='tech-icon' src={AudioLogo} alt='audio api logo'/>Audio rendered with the Web Audio API</li><br />
@@ -83,14 +91,30 @@ function App() {
       </section>
     </section>
         <section className='music-list'>
-      <h2 className='section-title'>music i've made</h2>
+      <h2 className='section-title'>Music Projects</h2>
       <section className='project grandfather'>
         <h3>Grandfather</h3>
-        <a href='https://grandfatherpdx.bandcamp.com/' target='_blank'>Bandcamp</a>
+        <div className='project-links'><a href='https://grandfatherpdx.bandcamp.com/' target='_blank'>Bandcamp</a></div>
+        <img className='project-image image-right' alt='grandfather image' src={GrandfatherPic} />
+        <p className='project-description'>"Semisensical somethingerother from Portland, thrown together quickly and carelessly by four degenerate children" — my magnum opus; a collaboration with three of my best friends that evolved from a basement jam session to a tour and two albums.</p>
+        <p className='tech-used'>
+          <ul className='tech-list'>
+            <li><img className='tech-icon' src={PeoplePic} alt='people logo'/>Songs written by all members</li><br />
+            <li><img className='tech-icon' src={MicrophonePic} alt='microphone logo'/>Recordings made by a slurry of contributors, including all band members</li><br />
+            <li><img className='tech-icon' src={AbletonPic} alt='ableton logo'/>Albums produced by me with Ableton Live 10</li><br />
+          </ul>
+        </p>
       </section>
       <section className='project refractor'>
         <h3>refractor</h3>
-        <a href='https://soundcloud.com/rfrctr' target='_blank'>SoundCloud</a>
+        <div className='project-links'><a href='https://soundcloud.com/rfrctr' target='_blank'>SoundCloud</a></div>
+        <img className='project-image image-left' alt='refractor image' src={RefractorPic} />
+        <p className='project-description'>My first creative endeavor — 100% melodic, electronic dance music; this is the project that made me an artist and taught me how to build things and work technically.</p>
+        <p className='tech-used'>
+          <ul className='tech-list'>
+            <li><img className='tech-icon' alt='ableton logo' src={AbletonPic} />All content written and produced by me in Ableton Live</li>
+          </ul>
+        </p>
       </section>
     </section>
     </div>
