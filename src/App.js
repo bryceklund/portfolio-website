@@ -85,7 +85,7 @@ function App() {
         <p className='tech-used'>
           <ul className='tech-list'>
             <li><img className='tech-icon' src={YelpLogo} alt='yelp logo'/>Bars found via the Yelp API</li><br />
-            <li><img className='tech-icon' src={JQLogo} alt='jQuery logo'/>Frontend vanilla JS ES6, jQuery, and good ole HTML5 & CSS3 (yowza!)</li><br />
+            <li><img className='tech-icon' src={JQLogo} alt='jQuery logo'/>Everything else written in vanilla JS ES6, jQuery, and good ole HTML5 & CSS3 (yowza!)</li><br />
           </ul>
         </p>
       </section>
