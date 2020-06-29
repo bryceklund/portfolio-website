@@ -57,13 +57,11 @@ function App() {
       </p>
     </section>
     <section className='project ytpoet'>
-    <div className='mask'>
     <h3>ytPoet</h3>
     <div className='project-links'>
       <a href='https://ytpoet.bryceklund.dev/' target='_blank'>live app</a>
       <a href='https://github.com/bryceklund/ytpoet-client' target='_blank'>client repo</a>
       <a href='https://github.com/bryceklund/ytpoet-server' target='_blank'>server repo</a>
-    </div>
     </div>
     <img className='project-image image-right' alt='ytpoet image' src='https://i.imgur.com/pfkOVND.png' />
     <p className='project-description'>A true artist, incapable of emotion, but vastly capable of procedurally generating content out of YouTube comments sections. Knows how to write four different types of poems, but can also format things to your liking.</p>
