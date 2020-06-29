@@ -28,7 +28,7 @@ function App() {
       <div className='hero'><h1>Bryce Eklund</h1></div>
       <div className='intro-title'><h2>full stack developer <br />& music maker</h2></div>
       <div className='bio'>
-        <h3>Oh hey, didn't see you walk in there. Welcome to my portfolio! Feel free to look around, and contact me if you're so inclined. My background consists of IT administration, technical support, and lots of code and music. Here you'll find a few examples of everything. My current fixation is with backend development, but I'm no stranger to a full stack. Let's make cool stuff! </h3>
+        <h3>Oh hey, didn't see you walk in there. Welcome to my portfolio! Feel free to look around, and contact me if you're so inclined. My background consists of IT administration, technical support, and lots of code and music. Here you'll find a few examples of everything. My current fixation is with backend development, but I'm no stranger to a full stack.</h3>
       </div>
       {/*i, I'm Bryce. I live for creative problem solving, engineering of all sorts, and good design. Having an idea is a mere fraction of the puzzle — elegant drafting, streamlined implementation, and peer-checked revision are all core elements of a magnificent project. These concepts extend far beyond the reaches of coding; they affect my art and my life. I love all parts of a stack, but with my experience as a producer and an IT administrator, I've developed a particular fixation with backend technologies.*/}
     </section>
@@ -39,7 +39,7 @@ function App() {
       <a href='mailto:bryce.eklund@gmail.com' target='blank'><img className='contact-logo' src={EmailLogo} alt='email' /></a>
     </section>
     <section className='project-list'>
-      <h2 className='section-title'>Code Projects</h2>
+      <h2 className='section-title'>Code</h2>
       <section className='project bread_bot'>
       <h3>bread_bot</h3>
       <div className='project-links'>
