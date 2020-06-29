@@ -15,6 +15,10 @@ import RefractorPic from './assets/refractor.jpg'
 import PeoplePic from './assets/people.png'
 import AbletonPic from './assets/ableton.png'
 import MicrophonePic from './assets/microphone.png'
+import BreadBot from './assets/bread_bot.png'
+import Wikipedia from './assets/wikipedia.png'
+import Twitter from './assets/twitter.png'
+import Python from './assets/python.png'
 import './App.css'
 
 function App() {
@@ -36,6 +40,43 @@ function App() {
     </section>
     <section className='project-list'>
       <h2 className='section-title'>Code Projects</h2>
+      <section className='project bread_bot'>
+      <h3>bread_bot</h3>
+      <div className='project-links'>
+        <a href='https://twitter.com/breads_bot/' target='_blank'>live</a>
+        <a href='https://github.com/bryceklund/bread_bot' target='_blank'>repo</a>
+      </div>
+      <img className='project-image' alt='bread_bot image' src={BreadBot} />
+      <p className='project-description'>A Twitter bot that helps us all learn of new breads, together.</p>
+      <p className='tech-used'>
+        <ul className='tech-list'>
+          <li><img className='tech-icon' src={Wikipedia} alt='wikipedia logo'/>Breads scraped from Wikipedia with Beautiful Soup</li><br />
+          <li><img className='tech-icon' src={Twitter} alt='twitter logo'/>Connected to Twitter via the Twitter API</li><br />
+          <li><img className='tech-icon' src={Python} alt='python logo'/>Bot written in Python 3</li><br />
+        </ul>
+      </p>
+    </section>
+    <section className='project ytpoet'>
+    <div className='mask'>
+    <h3>ytPoet</h3>
+    <div className='project-links'>
+      <a href='https://ytpoet.bryceklund.dev/' target='_blank'>live app</a>
+      <a href='https://github.com/bryceklund/ytpoet-client' target='_blank'>client repo</a>
+      <a href='https://github.com/bryceklund/ytpoet-server' target='_blank'>server repo</a>
+    </div>
+    </div>
+    <img className='project-image image-right' alt='ytpoet image' src='https://i.imgur.com/pfkOVND.png' />
+    <p className='project-description'>A true artist, incapable of emotion, but vastly capable of procedurally generating content out of YouTube comments sections. Knows how to write four different types of poems, but can also format things to your liking.</p>
+    <p className='tech-used'>
+      <ul className='tech-list'>
+        <li><img className='tech-icon' src={YoutTubeLogo} alt='youtube logo'/>Comments retrieved with the YouTube API</li><br />
+        <li><img className='tech-icon' src={ReactLogo} alt='react logo'/>Frontend built with React and bootstrapped with create-react-app</li><br />
+        <li><img className='tech-icon' src={NodeLogo} alt='node logo'/>API written in Node.js + Express</li><br />
+        <li><img className='tech-icon' src={PostgresLogo} alt='postgres logo'/>Database constructed via PostgreSQL</li><br />
+        <li><img className='tech-icon' src={CloudLogo} alt='cloud logo'/>Zeit hosts the front, Heroku hosts the back</li>
+      </ul>
+    </p>
+  </section>
       <section className='project chord-magic'>
         <h3>Chord Magic</h3>
         <div className='project-links'>
@@ -52,25 +93,6 @@ function App() {
             <li><img className='tech-icon' src={NodeLogo} alt='node logo'/>API written in Node.js with the lovely assistance of Express</li><br />
             <li><img className='tech-icon' src={PostgresLogo} alt='postgres logo'/>Database powered by PostgreSQL</li><br />
             <li><img className='tech-icon' src={CloudLogo} alt='cloud logo'/>SPA hosting by Zeit, server + db provisioning by Heroku, body by milk</li><br />
-          </ul>
-        </p>
-      </section>
-      <section className='project ytpoet'>
-        <h3>ytPoet</h3>
-        <div className='project-links'>
-          <a href='https://ytpoet.bryceklund.dev/' target='_blank'>live app</a>
-          <a href='https://github.com/bryceklund/ytpoet-client' target='_blank'>client repo</a>
-          <a href='https://github.com/bryceklund/ytpoet-server' target='_blank'>server repo</a>
-        </div>
-        <img className='project-image image-right' alt='ytpoet image' src='https://i.imgur.com/pfkOVND.png' />
-        <p className='project-description'>A true artist, incapable of emotion, but vastly capable of procedurally generating content out of YouTube comments sections. Knows how to write four different types of poems, but can also format things to your liking.</p>
-        <p className='tech-used'>
-          <ul className='tech-list'>
-            <li><img className='tech-icon' src={YoutTubeLogo} alt='youtube logo'/>Comments retrieved with the YouTube API</li><br />
-            <li><img className='tech-icon' src={ReactLogo} alt='react logo'/>Frontend built with React and bootstrapped with create-react-app</li><br />
-            <li><img className='tech-icon' src={NodeLogo} alt='node logo'/>API written in Node.js + Express</li><br />
-            <li><img className='tech-icon' src={PostgresLogo} alt='postgres logo'/>Database constructed via PostgreSQL</li><br />
-            <li><img className='tech-icon' src={CloudLogo} alt='cloud logo'/>Zeit hosts the front, Heroku hosts the back</li>
           </ul>
         </p>
       </section>
