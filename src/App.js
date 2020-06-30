@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import YoutTubeLogo from './assets/youtube.png'
 import CloudLogo from './assets/cloud.png'
 import JQLogo from './assets/jquery.png'
@@ -16,12 +16,49 @@ import PeoplePic from './assets/people.png'
 import AbletonPic from './assets/ableton.png'
 import MicrophonePic from './assets/microphone.png'
 import BreadBot from './assets/bread_bot.png'
+import ChordMagic from './assets/chordd-magic.png'
+import ytPoet from './assets/ytpoet.png'
+import BottomFeeder from './assets/bottom-feeder.png'
 import Wikipedia from './assets/wikipedia.png'
 import Twitter from './assets/twitter.png'
 import Python from './assets/python.png'
 import './App.css'
 
 function App() {
+  function scroll(id, event) {
+    if (event) { event.preventDefault() }
+    let leftPos;
+
+    switch(id) {
+      case 'bread_bot':
+        leftPos = 0
+        break
+      case 'ytpoet':
+        leftPos = 1100
+        break
+      case 'chord-magic':
+        leftPos = 1800
+        break
+      case 'bottom-feeder':
+        leftPos = 3000
+        break
+    }
+    console.log(leftPos)
+      document.getElementById('project-list').scroll({
+        top: 0,
+        left: leftPos,
+        behavior: "smooth"
+      })
+  
+  }
+
+  useEffect(() => {
+    return     document.getElementById('project-list').scroll({
+      top: 0,
+      left: 0,
+      behavior: "smooth"
+    })
+  })
   return (
     <div className="App">
       <section className='intro'>
@@ -38,10 +75,16 @@ function App() {
       <a href='https://linkedin.com/in/bryceklund' target='_blank'><img className='contact-logo' src={LinkedInLogo} alt='linkedin' /></a>
       <a href='mailto:bryce.eklund@gmail.com' target='blank'><img className='contact-logo' src={EmailLogo} alt='email' /></a>
     </section>
-    <section className='project-list'>
-      <h2 className='section-title'>Code</h2>
-      <section className='project bread_bot'>
-      <h3>bread_bot</h3>
+    <h2 className='section-title'>Code</h2>
+    <div className='project-anchor-links'>
+      <a href='' onClick={(e) => scroll('bread_bot', e)}>bread_bot</a>
+      <a href='' onClick={(e) => scroll('ytpoet', e)}>ytPoet</a>
+      <a href='' onClick={(e) => scroll('chord-magic', e)}>Chord Magic</a>
+      <a href='' onClick={(e) => scroll('bottom-feeder', e)}>Bottom Feeder</a>
+    </div>
+    <section className='project-list' id='project-list'>
+    <section className='project bread_bot' id='bread_bot'>
+      <h3>breads_bot</h3>
       <div className='project-links'>
         <a href='https://twitter.com/breads_bot/' target='_blank'>live</a>
         <a href='https://github.com/bryceklund/bread_bot' target='_blank'>repo</a>
@@ -56,14 +99,14 @@ function App() {
         </ul>
       </p>
     </section>
-    <section className='project ytpoet'>
+    <section className='project ytpoet' id='ytpoet'>
     <h3>ytPoet</h3>
     <div className='project-links'>
       <a href='https://ytpoet.bryceklund.dev/' target='_blank'>live app</a>
       <a href='https://github.com/bryceklund/ytpoet-client' target='_blank'>client repo</a>
       <a href='https://github.com/bryceklund/ytpoet-server' target='_blank'>server repo</a>
     </div>
-    <img className='project-image image-right' alt='ytpoet image' src='https://i.imgur.com/pfkOVND.png' />
+    <img className='project-image image-right' alt='ytpoet image' src={ytPoet} />
     <p className='project-description'>A true artist, incapable of emotion, but vastly capable of procedurally generating content out of YouTube comments sections. Knows how to write four different types of poems, but can also format things to your liking.</p>
     <p className='tech-used'>
       <ul className='tech-list'>
@@ -75,14 +118,14 @@ function App() {
       </ul>
     </p>
   </section>
-      <section className='project chord-magic'>
+    <section className='project chord-magic' id='chord-magic'>
         <h3>Chord Magic</h3>
         <div className='project-links'>
           <a href='https://chord-magic.bryceklund.dev/' target='_blank'>live app</a>
           <a href='https://github.com/bryceklund/chord-magic-client' target='_blank'>client repo</a>
           <a href='https://github.com/bryceklund/chord-magic-server' target='_blank'>server repo</a>
         </div>
-        <img className='project-image image-left' alt='chord-magic image' src='https://i.imgur.com/54raUns.png' />
+        <img className='project-image image-left' alt='chord-magic image' src={ChordMagic} />
         <p className='project-description'>A tool for exploring, building, and storing chord progressions. Choose from four in-browser-generated instruments, five octaves, and over 100 chords as you piece together the foundation for your new smash pop hit.</p>
         <p className='tech-used'>
           <ul className='tech-list'>
@@ -94,13 +137,13 @@ function App() {
           </ul>
         </p>
       </section>
-      <section className='project bottom-feeder'>
+    <section className='project bottom-feeder' id='bottom-feeder'>
         <h3>Bottom Feeder</h3>
         <div className='project-links'>
           <a href='https://bryceklund.github.io/bottom-feeder/' target='_blank'>live app</a>
           <a href='https://github.com/bryceklund/bottom-feeder' target='_blank'>repo</a>
         </div>
-        <img className='project-image image-left' alt='bottom-feeder image' src='https://i.imgur.com/7uXFTvQ.png' />
+        <img className='project-image image-left' alt='bottom-feeder image' src={BottomFeeder} />
         <p className='project-description'>Not here to impress you — just to get you to the nearest, lowest-rated dive bar. With couches.</p>
         <p className='tech-used'>
           <ul className='tech-list'>
@@ -109,9 +152,11 @@ function App() {
           </ul>
         </p>
       </section>
-    </section>
+    <div className='end-space'>.</div>
+      </section>
+    <h2 className='section-title'>Music</h2>
       <section className='project-list music'>
-        <h2 className='section-title'>Music Projects</h2>
+        
         <section className='project grandfather'>
           <h3>Grandfather</h3>
           <div className='project-links'><a href='https://grandfatherpdx.bandcamp.com/' target='_blank'>Bandcamp</a></div>

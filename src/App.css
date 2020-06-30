@@ -32,6 +32,7 @@ footer, header, hgroup, menu, nav, section {
 body {
   line-height: 1;
   background-image: url("./assets/flowers.jpg");
+  background-attachment: fixed;
 }
 ol, ul {
 	list-style: none;
@@ -104,6 +105,7 @@ a:link, a:visited {
   justify-content: space-evenly;
   backdrop-filter: blur(20px) grayscale(100%);
   padding: 7px;
+  margin-top: -3px;
 }
 
 .links a:hover {
@@ -125,10 +127,8 @@ a:link, a:visited {
 .project-list {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: top;
   max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .section-title {
@@ -145,6 +145,7 @@ a:link, a:visited {
   border-top: none;
   /*box-shadow: 9px 12px 30px;*/
 }
+
 /*
 .ytpoet:hover {
   animation: card-hover1;
@@ -213,6 +214,18 @@ a:link, a:visited {
 
 .refractor {
   margin-bottom: 45px;
+}
+
+.end-space {
+  display: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.project-anchor-links {
+  display: none;
 }
 
 @keyframes card-hover1 {
@@ -294,6 +307,25 @@ a:link, a:visited {
       padding-bottom: 0;
       line-height: 20px;
     }
+
+
+    .image-left {
+      float: left;
+      margin-right: 25px;
+    }
+    
+    .image-right {
+      float: right;
+      margin-left: 25px;
+    }
+
+    .image-left {
+      border-radius: 0 0 0 10px;
+    }
+
+    .image-right {
+      border-radius: 0 0 10px 0;
+    }
   }
 
   .grandfather .project-image {
@@ -305,34 +337,21 @@ a:link, a:visited {
     width: 194px;
   }
 
-  .image-left {
-    float: left;
-    margin-right: 25px;
-  }
-  
-  .image-right {
-    float: right;
-    margin-left: 25px;
-  }
 
   .project {
     border: 1px solid black;
     border-radius: 10px;
     margin-bottom: 30px;
     backdrop-filter: blur(30px);
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .project h3 {
     border-radius: 10px 10px 0 0;
   }
 
-  .image-left {
-    border-radius: 0 0 0 10px;
-  }
 
-  .image-right {
-    border-radius: 0 0 10px 0;
-  }
 
   .project-links {
     position: relative;
@@ -340,10 +359,6 @@ a:link, a:visited {
 
   .ytpoet .project-description {
     line-height: 27px;
-  }
-
-  .project-list {
-    max-width: 1100px;
   }
 
   .bottom-feeder .project-image {
@@ -356,3 +371,84 @@ a:link, a:visited {
   }
 }
 
+@media screen and (min-width: 800px) {
+  .bread_bot {
+    margin-left: 35vw !important;
+  }
+
+  .bottom-feeder {
+    margin-right: 40vw !important;
+  }
+
+  .grandfather .project-image, .refractor .project-image{
+    width: 300px;
+  }
+
+  .grandfather, .refractor {
+    max-width: 300px;
+    margin-left: 50px !important;
+    margin-right: 50px !important;
+  }
+
+  .music {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .project-list {
+    overflow: auto;
+    white-space: nowrap;
+    max-width: 100%;
+    flex-direction: row;
+    scroll-snap-type: x mandatory;
+    scroll-snap-points-x: repeat(300px);
+  }
+
+  .project {
+    display: inline-block;
+    margin-left: 150px;
+    margin-right: 150px;
+    height: 100%;
+    scroll-snap-align: center;
+  }
+
+  .project-description, .tech-used {
+    white-space: normal;
+  }
+
+  .ytpoet .tech-list {
+    margin-bottom: 15px;
+  }
+
+  .end-space {
+    display: inline-block;
+    visibility: hidden;
+  }
+
+  .project-anchor-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+  }
+
+  .project-anchor-links a {
+    text-decoration: none;
+    text-shadow: 1px 1px pink;
+    font-weight: bold;
+    color: darkslategray;
+  }
+
+  .project-anchor-links a:hover {
+    text-shadow: 1px 1px gray;
+    color: pink;
+  }
+
+  .project-anchor-links a:active {
+    color: lavender;
+  }
+}
